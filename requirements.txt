@@ -29,7 +29,6 @@ package-json==0.0.0
 panda==0.3.1
 pandas==1.0.3
 pathtools==0.1.2
-post==2019.4.13
 protobuf==3.1.0
 psycopg2==2.8.5
 public==2019.4.13
