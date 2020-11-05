@@ -38,7 +38,6 @@ PyMySQL==0.9.3
 python-dateutil==1.5
 pytz==2019.3
 query-string==2019.4.13
-request==2019.4.13
 requests==2.23.0
 selenium==3.141.0
 six==1.14.0
