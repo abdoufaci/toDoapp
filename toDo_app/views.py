@@ -8,7 +8,7 @@ from django.http import HttpResponseRedirect
 def home(request):
     todo_items = Todo.objects.all().order_by('-added_date')
     return render(request, 'my_toDo/toDoApp.html', {
-        'todo_items':todo_items
+        'todo_items': todo_items
     })
 
 
@@ -16,8 +16,12 @@ def add_todo(request):
     request.method
     current_date = timezone.now()
     todo = request.POST.get('todo')
-    created_obj = Todo.objects.create(added_date= current_date,text=todo)
-    lenght_of_todos = Todo.objects.all().count()
+    print(todo)
+    if todo == '':
+        return HttpResponseRedirect('/')
+    else:
+        created_obj = Todo.objects.create(added_date=current_date, text=todo)
+        lenght_of_todos = Todo.objects.all().count()
 
     return HttpResponseRedirect('/')
 
