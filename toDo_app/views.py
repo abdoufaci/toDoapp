@@ -16,7 +16,6 @@ def add_todo(request):
     request.method
     current_date = timezone.now()
     todo = request.POST.get('todo')
-    print(todo)
     if todo == '':
         return HttpResponseRedirect('/')
     else:
